@@ -10,15 +10,24 @@ UserProduct.destroy_all
 Product.destroy_all
 Order.destroy_all
 
-carrot = Product.create(name: "carrot", product: "vegetable")
-lemon = Product.create(name: "lemon", product: "fruit")
+vegetable = Product.create(product: "Vegetable")
+fruit = Product.create(product: "Fruit")
+
+carrot = Product.create(product: "carrot", type: "vegetable")
+onion = Product.create(product: "onion", type: "vegetable")
+chilli = Product.create(product: "chilli", type: "vegetable")
+brocollini = Product.create(product: "brocollini", type: "vegetable")
+cucumber = Product.create(product: "cucumber", type: "vegetable")
+potatoe = Product.create(product: "potatoe", type: "vegetable")
+
+lemon = Product.create(product: "lemon", type: "fruit")
+banana = Product.create(product: "banana", type: "fruit")
+apple = Product.create(product: "apple", type: "fruit")
+orange = Product.create(product: "orange", type: "fruit")
+pineapple = Product.create(product: "pineapple", type: "fruit")
 
 
 
-vegetable = Product.create(name: "carrot", product: "vegetable")
 
-
-
-fruit = Product.create(name: "lemon", product: "fruit")
 
 
