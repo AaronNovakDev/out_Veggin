@@ -18,13 +18,14 @@ onion = Product.create(product: "onion", type: "vegetable")
 chilli = Product.create(product: "chilli", type: "vegetable")
 brocollini = Product.create(product: "brocollini", type: "vegetable")
 cucumber = Product.create(product: "cucumber", type: "vegetable")
-potatoe = Product.create(product: "potatoe", type: "vegetable")
+potatoe = Product.create(product: "potatoe", type: "vegetSable")
 
 lemon = Product.create(product: "lemon", type: "fruit")
 banana = Product.create(product: "banana", type: "fruit")
 apple = Product.create(product: "apple", type: "fruit")
 orange = Product.create(product: "orange", type: "fruit")
 pineapple = Product.create(product: "pineapple", type: "fruit")
+watermelon = Product.create(product: "watermelon," type: "fruit")
 
 
 

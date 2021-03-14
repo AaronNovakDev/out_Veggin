@@ -1,18 +1,36 @@
-<H1> out_Veggin </h1>
-
+<!-- As a heading -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <span class="navbar-text">
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    </span>
+    <span class="navbar-brand mb-0 h1">out_Veggin</span>
   </div>
 </nav>
-<nav class="navbar navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">Login</a>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search!</button>
-    </form>
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id=navbarNav>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+        <% if user_signed_in?%>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <% end %>
+        </li>
+
+               <%# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> %>
+      </ul>
+    </div>
   </div>
 </nav>
