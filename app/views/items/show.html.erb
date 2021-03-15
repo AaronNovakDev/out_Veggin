@@ -22,11 +22,11 @@
 
 <p>
   <strong>User:</strong>
-  <%= @item.user_id %>
+  <%= @item.user.email %>
 </p>
 
 <p> 
 <%= image_tag @items.picture %>
-
+</p>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
