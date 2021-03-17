@@ -2,7 +2,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @item.type %>
+  <%= @item.category %>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
 </p>
 
 <p> 
-<%= image_tag @items.picture %>
+<%= image_tag @item.avatar if @item.avatar.attached? %>
 </p>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

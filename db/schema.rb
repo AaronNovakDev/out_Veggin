@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.text "description"
     t.float "price"
     t.integer "quantity"
@@ -55,16 +55,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "profile_users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -82,16 +72,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
-  end
-
-  create_table "types", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_products", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
