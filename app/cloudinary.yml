@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: im-godlike
+  api_key: '551451474649343'
+  api_secret: V1Z035xj60Hz0ku7G_Mf1xgvKd8
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: im-godlike
+  api_key: '551451474649343'
+  api_secret: V1Z035xj60Hz0ku7G_Mf1xgvKd8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: im-godlike
+  api_key: '551451474649343'
+  api_secret: V1Z035xj60Hz0ku7G_Mf1xgvKd8
+  enhance_image_tag: true
+  static_file_support: false

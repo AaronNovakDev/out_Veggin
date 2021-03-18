@@ -58,6 +58,18 @@ I used Ruby to write the whole code and a bit of Javascript.
 
 ## R12 User stories for your app
 
+As a user, I can create an account on out_Veggin, so that I can browse and buy/sell produce 
+As a user, I can login to the platform, so that I can access my private account and transact 
+As a user, if I forget my password, I can reset it, so that I can continue to access my account
+As a user, I can log out of the platform, so that my account stays safe
+
+As a buyer, I can browse what type of produce is available and see basic information about each item, so that I can decide whether or not to buy
+As a buyer I can purchase items from the store using my credit card
+As a seller, I can list new items (with an image) for sale so that buyers can see  them and decide to buy 
+As a seller, I can see a full list of what I have for sale, so that I can monitor stock and update it as needed 
+As a seller, I can edit the details of my items so that they are correct and don't mislead buyers
+As a seller, I can delete produce so that items no longer available are not displayed 
+
 ## R13 Wireframes for your app
 
 ## R14 An ERD for your app
@@ -68,13 +80,14 @@ I used Ruby to write the whole code and a bit of Javascript.
 
 ## R17 Describe your projects models in terms of the relationships (active record associations) they have ## with each other
 
+
 ## R18 Discuss the database relations to be implemented in your application
 
 The database relations
 
 ## R19 Provide your database schema design
 
-Ive added in comments in my Shema file as per CoderAcademy instructions.
+Ive added in comments in my Schema file as per CoderAcademy instructions.
 It shows what each line of code does on each table.
 The reason we have t.index is just to make the code much more quicker to write and draw up a full table with only a simple few words of sytax thanks to our ruby gems.
 The schema file is created once we run the migrate to migrate all the tables and let them all talk together in the way they are entered, where it be one to one , one to many, many to many, etc.
