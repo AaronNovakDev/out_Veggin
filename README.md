@@ -1,5 +1,9 @@
 # out_Veggin
 
+Images I used and saying thanks to:
+https://www.printablesigns.net/preview/Recyclables_No_Food_Waste
+
+
 # Criteria
 R1 Create your app using Ruby on Rails. - Done
 R2 Use Postgresql database in development and production. - Done
@@ -72,13 +76,29 @@ As a seller, I can delete produce so that items no longer available are not disp
 
 ## R13 Wireframes for your app
 
+[]()
+
 ## R14 An ERD for your app
 
 ## R15 Explain the different high-level components (abstractions) in your app
 
+My high level components im using are Postgreql – its a great easy to use DB software that's free, When you couple this with rails, it creates a very powerful database application maker.
+I first of all created a postgresql account and linked it to my rails application by putting my credentials into the database.yml file.
+Once I completed that I then created the DB integration with “rails db:create” once that was done I ran “rails db:migrate”, by doing this is creates a connection in the Schema.rb file so that Rails knows the DB and Rails are linked. You can then create what ever tables you want with what ever colums you want with simple syntax such as 
+“create_table(:users_roles, :id => false) do |t|
+t.references :user
+t.references :role
+end”
+This then once Migrated will create the tables and columns you want in the DB.
+
 ## R16 Detail any third party services that your app will use
 
+The application is uploaded to Heroku and fully operational (was) at the time of writting this with full Auth and CRUD.
+I will be hosting my images on Cloudiary, its free to use and you have an extremely reasonable amount of space for a free acount.
+
 ## R17 Describe your projects models in terms of the relationships (active record associations) they have ## with each other
+
+
 
 
 ## R18 Discuss the database relations to be implemented in your application
@@ -92,7 +112,10 @@ It shows what each line of code does on each table.
 The reason we have t.index is just to make the code much more quicker to write and draw up a full table with only a simple few words of sytax thanks to our ruby gems.
 The schema file is created once we run the migrate to migrate all the tables and let them all talk together in the way they are entered, where it be one to one , one to many, many to many, etc.
 
+https://app.quickdatabasediagrams.com/#/d/Dh9l84
+
+![dbschema](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/DB_schema.jpg)
 ## R20 Describe the way tasks are allocated and tracked in your project
 
 https://trello.com/b/vL7XZoO8/project-management
-Ive used the Trello board to track my tasks with. Its really easy to use and a great all round task tracking app.
+Ive used the Trello board to track my tasks with. Its really easy to use and a great all round task tracking app. It has helped me by reminding me what to do and how much time i should be spending on each part. It also helps me by having an all in one place to go to, to see what taskts i have left.
