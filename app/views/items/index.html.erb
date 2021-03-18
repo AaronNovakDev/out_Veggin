@@ -23,8 +23,10 @@
         <td><%= item.quantity %></td>
         <td><%= item.user_id %></td>
         <td><%= link_to 'Show', item %></td>
+        <%if user_signed_in? && current_user == item.user%>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Warning! Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

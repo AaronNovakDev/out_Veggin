@@ -98,6 +98,13 @@ I will be hosting my images on Cloudiary, its free to use and you have an extrem
 
 ## R17 Describe your projects models in terms of the relationships (active record associations) they have ## with each other
 
+My models are:-
+-Item
+-Order
+-Profile
+-Role 
+-User
+
 
 
 
