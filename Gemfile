@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'kaminari'
+gem 'cancancan'
 
 
 group :development, :test do
