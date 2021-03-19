@@ -31,7 +31,9 @@ https://github.com/AaronNovakDev/out_Veggin
 
 ## R11 Description of your marketplace app (website), including:
 ## - Purpose
-The purpose of my application 
+The purpose of my application is to fill in the void in the marketplace, where you can only buy from either the large chains, or directly from farmers.
+I would like to make it available for every one to be able to sign up and sell there fruits and vegetables.
+I understand there will be more insurances etc involved, but that will be set up later down the track.
 
 ## - Functionality / features
 It features the full CRUD capabilitites.
@@ -51,6 +53,7 @@ Buyers page
 Buy item page
 Payment page
 ## - Screenshots
+
 
 ## - Target audience
 My target audience is every one who would like to make some extra cash and enjoy growing fruit and vegetables. I am mainly targetting the stay at home people that either have no work, are out of work, or unable to work. This way they can still work and stay fit and healthy while staying home.
@@ -76,9 +79,13 @@ As a seller, I can delete produce so that items no longer available are not disp
 
 ## R13 Wireframes for your app
 
-[]()
-
+[WireFrameMobile](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/mobfirst_wf.png)
+![WireFramMobile](mobfirst_wf.png)
+![WireFramePC](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/wireframes.png)
+![WireFramePC](wireframes.png)
 ## R14 An ERD for your app
+
+![ERD](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/ERD.png)
 
 ## R15 Explain the different high-level components (abstractions) in your app
 
@@ -90,6 +97,9 @@ t.references :user
 t.references :role
 end”
 This then once Migrated will create the tables and columns you want in the DB.
+Ruby has an inbuilt set of functions that you can call on that make database making a breeze.
+They call it active record associations. What is does is creates the data base entity links behind the scenes so you dont have to do all the nitty gritty.
+They use terms like belongs_to, has_one, has_many etc, which link 2 tables together so they work in unison 
 
 ## R16 Detail any third party services that your app will use
 
@@ -105,12 +115,19 @@ My models are:-
 -Role 
 -User
 
+I have a User that has many Items, but Items have only one User. 
+A User can have many Orders, but a single Order can only have one User. 
+A Profile belongs to the User and has many Items. 
+A User can have one Role, but there are many Roles that a User can be. (Later down the track, super Edit, Super Delete, Super user access to all CRUD.)
+
 
 
 
 ## R18 Discuss the database relations to be implemented in your application
 
-The database relations
+***relatiosnhips between databse and models how they work
+
+
 
 ## R19 Provide your database schema design
 
@@ -119,6 +136,8 @@ It shows what each line of code does on each table.
 The reason we have t.index is just to make the code much more quicker to write and draw up a full table with only a simple few words of sytax thanks to our ruby gems.
 The schema file is created once we run the migrate to migrate all the tables and let them all talk together in the way they are entered, where it be one to one , one to many, many to many, etc.
 
+My schema was updated a few times as I learnt different ways on implementing what i wanted to do and how i wanted the DB to run.
+
 https://app.quickdatabasediagrams.com/#/d/Dh9l84
 
 ![dbschema](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/DB_schema.jpg)
@@ -126,3 +145,13 @@ https://app.quickdatabasediagrams.com/#/d/Dh9l84
 
 https://trello.com/b/vL7XZoO8/project-management
 Ive used the Trello board to track my tasks with. Its really easy to use and a great all round task tracking app. It has helped me by reminding me what to do and how much time i should be spending on each part. It also helps me by having an all in one place to go to, to see what taskts i have left.
+
+## HOW TO RUN THIS PROGRAM
+
+To run this application all you need to do is open the website that ive attached above. 
+Once youve clicked that, it will take you straight into the login screen. 
+Since your a new User you click on "Sign Up"
+You create your user name, use your email address, then enter a password thats at least 6 characters long. Then click on Sign Up!.
+Now youve made it to the Home screen, from here its as simple as adding in your items via the Add Item button, Or you can click on Garden.
+Garden will take you to every ones listed Items for sale. 
+From here you can add, update or destroy your own items, but youll notice the other users you can only view.
