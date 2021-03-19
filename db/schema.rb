@@ -15,8 +15,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  # This is how I add my files to a cloud service to display on my app
-  #I used cloudinary.
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -27,7 +25,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-# this is again related to my online storage account
   create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
@@ -46,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  # This is creating my items db table, ive used many types of info users will add
   create_table "items", force: :cascade do |t|
     t.string "category"
     t.text "description"
@@ -58,19 +54,16 @@ ActiveRecord::Schema.define(version: 2021_03_12_112317) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
-  # This tab is for when my order have been placed, it will create the order and when 
   create_table "orders", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-# when you create your profile this will give you the date and time it was created
   create_table "profiles", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  # Ive created this table for the many roles a user can have, whether its full CRUD or maybe just a standard add acount
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
