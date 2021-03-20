@@ -1,28 +1,32 @@
 <div class="jumbotron">
 <div class="row">
       <div class="col-md-6">
-        <h1 class="display-2">Welcome to out_Veggin!</h1>
-        <h2 class="display-12"><p>Whether your here to make a "celery", or</p>
+        <h1 class="display-1">Welcome to out_Veggin!</h1>
+        <h1 class="display-8"><p>Whether your here to make a "celery", or</p>
         <p>"Leek" your lips over these delish Veggies,</p>
         <p>"Lettuce" show you a great time!</p></h2>
-        <hr class="my-4">
+        <h1 class="display-3">
         <p>Check out what's trending right now!</p>
-        <p class="lead">
+        <%# <p class="lead">
            <%= link_to "Add Item", new_item_path, class:"btn btn-primary btn-lg"%>
-        </p>
-                <p class="lead">
+        </p> 
+         <%# <p class="lead">
            <%= link_to "Garden", items_path, class:"btn btn-primary btn-lg"%>
         </p>
 
     </div>
-    
-   <div class="col-md-6">
-   <%= image_tag "carrot", class: "home-img1"%>
-
-   </div>
-
-   <div class="col-md-6">
-   <%= image_tag "lemon", class: "home-img2"%>
-
-   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+   <%= image_tag "carrot", class: "home-img1"%>
+   <p class="lead">
+           <%= link_to "Buy Now!", items_path, class:"btn btn-outline-success"%>
+
+   </div>
+
+   <div class="col">
+   <%= image_tag "lemon", class: "home-img2"%>
+   <p class="lead">
+           <%= link_to "Buy Now!", items_path, class:"btn btn-outline-success"%>
+   </div>

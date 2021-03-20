@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: %i[show index]
+  load_and_authorize_resource
 
   # GET /items or /items.json
   def index
@@ -52,7 +54,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
-      format.html { redirect_to items_url, notice: "Item was successfully destroyed." }
+      format.html { redirect_to items_url, notice: "Item was successfully deleted." }
       format.json { head :no_content }
     end
   end

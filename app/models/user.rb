@@ -6,4 +6,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :item
   has_one_attached :avatar
+  enum role: {normal: 0, super_user: 1, edit_master: 2}
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'orders/new'
   resources :items
   devise_for :users
 
