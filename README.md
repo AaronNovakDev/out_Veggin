@@ -5,12 +5,12 @@ https://www.printablesigns.net/preview/Recyclables_No_Food_Waste
 
 
 # Criteria
-R1 Create your app using Ruby on Rails. - Done
-R2 Use Postgresql database in development and production. - Done
-R3 Your app will have authentication (eg. Devise). - Done
-R4 Your app will have authorisation (i.e. users have restrictions on what they can see and edit).
-R5 Your app will have some type of file (eg. images) uploading capability. - Done
-R6 Your app is to be deployed to Heroku (recommended) or AWS. -Done
+* R1 Create your app using Ruby on Rails. - Done
+* R2 Use Postgresql database in development and production. - Done
+* R3 Your app will have authentication (eg. Devise). - Done
+* R4 Your app will have authorisation (i.e. users have restrictions on what they can see and edit). -Donem
+* R5 Your app will have some type of file (eg. images) uploading capability. - Done
+* R6 Your app is to be deployed to Heroku (recommended) or AWS. -Done
 ## R7 Identification of the problem you are trying to solve by building this particular marketplace app.
 
 I've built this market-app because I have a lot of neighbours around me that really love working in their gardens, some are unfit for work, but produce some really nice fruit and vegetables.
@@ -52,7 +52,32 @@ Destroy items
 Buyers page
 Buy item page
 Payment page
+![Sitemap](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/Site_Map.jpg)
 ## - Screenshots
+Here are my Screenshots of the working app, it works perfectly locally, but it for some reason when pushed to heroku had some old errors thats i fixed up pushed to it, so here are them. It is also fine to clone off github, I used all the standard gems.
+Authorisation access fail
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/authaccessfail.jpg)
+delete item
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/delmessage.png)
+delete item success
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/delsuccess.png)
+edit item
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/edit.jpg)
+edit item complete
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/editcomplete.png)
+garden page
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/garden.jpg)
+home page
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/homepage.jpg)
+add item succesful
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/itemsuccess.png)
+new item screen
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/new.jpg)
+show items
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/show.png)
+signup screen
+![Screenshots](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/signup.png)
+
 
 
 ## - Target audience
@@ -79,13 +104,12 @@ As a seller, I can delete produce so that items no longer available are not disp
 
 ## R13 Wireframes for your app
 
-[WireFrameMobile](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/mobfirst_wf.png)
-![WireFramMobile](mobfirst_wf.png)
-![WireFramePC](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/wireframes.png)
-![WireFramePC](wireframes.png)
+My wireframes for mobile first and computer.
+![WireFramMobile](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/mobfirst_wf.png)
+![WireFramePC](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/wireframes.png)
 ## R14 An ERD for your app
-
-![ERD](https://github.com/AaronNovakDev/out_Veggin/blob/fd7ae775c5eb1eb8bca7466b431b94127989654d/app/assets/images/ERD.png)
+My ERD
+![ERD](/home/aaron/Coder_Academy/Term2/Assignment/out_Veggin/out_Veggin/app/assets/images/ERD.png)
 
 ## R15 Explain the different high-level components (abstractions) in your app
 
@@ -125,7 +149,11 @@ A User can have one Role, but there are many Roles that a User can be. (Later do
 
 ## R18 Discuss the database relations to be implemented in your application
 
-***relatiosnhips between databse and models how they work
+My data base implementations that are linked to my PostgresQL are Items, Orders, Profile, Role and User.
+These all link with the Postgresql when you run a DB:create and then a DB:migrate. 
+I have created a profile model which links to their items, they can also link to their order if they where to buy something.
+Because ive used devise I only needed to create one user which is able to buy or sell.
+I firstly wanted to create 2 types of User Roles, I wanted to keep them seperate and then I thought harder and didnt think it was worth it, I can create one User model and they can buy or sell depending on what they click on. I would of liked to have another model that was connected to a review type system and that will be implememented in future. 
 
 
 
